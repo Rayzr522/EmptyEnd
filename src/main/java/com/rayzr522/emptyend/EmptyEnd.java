@@ -1,6 +1,7 @@
 package com.rayzr522.emptyend;
 
 import org.bukkit.World.Environment;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -19,7 +20,8 @@ public class EmptyEnd extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onSpawn(CreatureSpawnEvent e) {
-        if (e.getLocation().getWorld().getEnvironment() == Environment.THE_END && e.getSpawnReason() == SpawnReason.NATURAL || e.getSpawnReason() == SpawnReason.CHUNK_GEN) {
+        if (e.getEntityType() == EntityType.ENDERMAN && e.getLocation().getWorld().getEnvironment() == Environment.THE_END && e.getSpawnReason() == SpawnReason.NATURAL
+                || e.getSpawnReason() == SpawnReason.CHUNK_GEN) {
             e.setCancelled(true);
         }
 
