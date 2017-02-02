@@ -3,10 +3,3 @@ name: EmptyEnd
 version: 1.0.0
 description: Prevent endermen from spawning in the end.
 author: Rayzr
-#depend: [CreativelyNamedLib]
-#commands:
-#  emptyend:
-#    description: EmptyEnd main command
-#    aliases: [alias1,alias2]
-#    usage: "/emptyend [command]"
-#    permission: EmptyEnd.main
